@@ -9,6 +9,4 @@ def fizzbuzz():
             print("Buzz", end="")
         else:
             print("{}".format(i), end="")
-        
-        # Hər bir elementdən sonra mütləq boşluq çap edirik (100-cü daxil olmaqla)
         print(" ", end="")
