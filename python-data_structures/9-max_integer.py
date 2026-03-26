@@ -2,7 +2,6 @@
 def max_integer(my_list=[]):
     if not my_list:
         return None
-    
     big_num = my_list[0]
     for i in my_list:
         if i > big_num:
