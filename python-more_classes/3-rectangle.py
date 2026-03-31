@@ -6,18 +6,23 @@ class Rectangle:
     """Düzbucaqlını təmsil edən klass."""
 
     def __init__(self, width=0, height=0):
-        """Düzbucaqlını yaradır."""
+        """Düzbucaqlını yaradır.
+
+        Args:
+            width (int): Düzbucaqlının eni.
+            height (int): Düzbucaqlının hündürlüyü.
+        """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Width getter."""
+        """Eni geri qaytarır."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Width setter."""
+        """Eni təyin edir və yoxlayır."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -26,12 +31,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """Height getter."""
+        """Hündürlüyü geri qaytarır."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Height setter."""
+        """Hündürlüyü təyin edir və yoxlayır."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -39,11 +44,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Sahəni qaytarır."""
+        """Düzbucaqlının sahəsini qaytarır."""
         return self.__width * self.__height
 
     def perimeter(self):
-        """Perimetri qaytarır."""
+        """Düzbucaqlının perimetrini qaytarır."""
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
@@ -52,7 +57,7 @@ class Rectangle:
         """Düzbucaqlını '#' simvolu ilə qaytarır."""
         if self.__width == 0 or self.__height == 0:
             return ""
-        
+
         rect_str = ""
         for i in range(self.__height):
             rect_str += "#" * self.__width
