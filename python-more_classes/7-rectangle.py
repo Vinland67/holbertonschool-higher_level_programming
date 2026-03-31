@@ -61,11 +61,9 @@ class Rectangle:
         """Düzbucaqlını print_symbol ilə vizual təsvir edir."""
         if self.__width == 0 or self.__height == 0:
             return ""
-        
-        # Simvolu stringə çevirib sətirləri qururuq
         row = str(self.print_symbol) * self.__width
         rect_str = (row + "\n") * self.__height
-        return rect_str[:-1]  # Sonuncu artıq yeni sətiri (\n) silirik
+        return rect_str[:-1]
 
     def __repr__(self):
         """Obyektin kod təsvirini qaytarır."""
