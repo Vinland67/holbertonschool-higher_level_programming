@@ -1,17 +1,14 @@
 #!/usr/bin/python3
 """
-BaseGeometry modulunu təkmilləşdiririk.
+Module for BaseGeometry class.
 """
 
 
 class BaseGeometry:
-    """BaseGeometry klası."""
+    """A class with public instance method area."""
 
     def area(self):
         """
-        Sahəni hesablamalıdır, lakin hələ tətbiq edilməyib.
-        
-        Raises:
-            Exception: area() is not implemented mesajı ilə.
+        Raises an Exception because area is not implemented.
         """
         raise Exception("area() is not implemented")
