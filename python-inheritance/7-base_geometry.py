@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module for BaseGeometry class with integer validation.
+Module for BaseGeometry class.
 """
 
 
@@ -16,7 +16,7 @@ class BaseGeometry:
         Validates value as an integer greater than 0.
 
         Args:
-            name (str): The name of the value (always a string).
+            name (str): The name of the value.
             value (int): The value to validate.
 
         Raises:
