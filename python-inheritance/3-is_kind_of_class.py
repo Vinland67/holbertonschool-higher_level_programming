@@ -1,19 +1,18 @@
 #!/usr/bin/python3
 """
-Obyektin klasını və ya miras aldığı klasları yoxlayan modul.
+Module for is_kind_of_class function.
 """
 
 
 def is_kind_of_class(obj, a_class):
     """
-    Obyektin müəyyən klasın instansı olub-olmadığını, yaxud 
-    həmin klasdan miras alan klasdan olub-olmadığını yoxlayır.
+    Check if an object is an instance of, or inherited from, a class.
 
     Args:
-        obj: Yoxlanılacaq obyekt.
-        a_class: Müqayisə ediləcək klas.
+        obj: The object to check.
+        a_class: The class to compare against.
 
     Returns:
-        bool: Uyğundursa True, yoxsa False.
+        True if it is an instance or inherited, otherwise False.
     """
     return isinstance(obj, a_class)
