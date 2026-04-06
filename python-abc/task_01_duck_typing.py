@@ -7,7 +7,7 @@ import math
 
 
 class Shape(ABC):
-    """Abstract class for Shape."""
+    """Abstract class Shape with area and perimeter methods."""
 
     @abstractmethod
     def area(self):
@@ -28,11 +28,11 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        """Calculates area of Circle."""
+        """Calculates and returns the area of the circle."""
         return math.pi * (self.radius ** 2)
 
     def perimeter(self):
-        """Calculates perimeter of Circle."""
+        """Calculates and returns the perimeter of the circle."""
         return 2 * math.pi * self.radius
 
 
@@ -45,15 +45,18 @@ class Rectangle(Shape):
         self.height = height
 
     def area(self):
-        """Calculates area of Rectangle."""
+        """Calculates and returns the area of the rectangle."""
         return self.width * self.height
 
     def perimeter(self):
-        """Calculates perimeter of Rectangle."""
+        """Calculates and returns the perimeter of the rectangle."""
         return 2 * (self.width + self.height)
 
 
 def shape_info(shape):
-    """Prints area and perimeter of a shape using duck typing."""
+    """
+    Prints the area and perimeter of a shape.
+    Uses duck typing to access area() and perimeter() methods.
+    """
     print("Area: {}".format(shape.area()))
     print("Perimeter: {}".format(shape.perimeter()))
