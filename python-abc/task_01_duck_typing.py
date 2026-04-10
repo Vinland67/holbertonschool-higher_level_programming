@@ -1,59 +1,63 @@
 #!/usr/bin/python3
 """
-Abstrakt klaslar və Duck Typing-i nümayiş etdirən modul.
+This module defines an abstract class Shape and its subclasses
+Circle and Rectangle, demonstrating duck typing.
 """
 from abc import ABC, abstractmethod
 import math
 
 
 class Shape(ABC):
-    """Bütün formalar üçün abstrakt baza klası."""
+    """Abstract base class for all shapes."""
 
     @abstractmethod
     def area(self):
-        """Sahəni hesablayan abstrakt metod."""
+        """Calculates the area of the shape."""
         pass
 
     @abstractmethod
     def perimeter(self):
-        """Perimetri hesablayan abstrakt metod."""
+        """Calculates the perimeter of the shape."""
         pass
 
 
 class Circle(Shape):
-    """Dairə klası."""
+    """Class representing a circle."""
 
     def __init__(self, radius):
-        """Radiusu mənimsədir."""
+        """Initializes the circle with a radius."""
         self.radius = radius
 
     def area(self):
-        """Dairənin sahəsini hesablayır."""
+        """Returns the area of the circle."""
         return math.pi * (self.radius ** 2)
 
     def perimeter(self):
-        """Dairənin perimetrini hesablayır."""
+        """Returns the perimeter of the circle."""
         return 2 * math.pi * self.radius
 
 
 class Rectangle(Shape):
-    """Düzbucaqlı klası."""
+    """Class representing a rectangle."""
 
     def __init__(self, width, height):
-        """Eni və hündürlüyü mənimsədir."""
+        """Initializes the rectangle with width and height."""
         self.width = width
         self.height = height
 
     def area(self):
-        """Düzbucaqlının sahəsini hesablayır."""
+        """Returns the area of the rectangle."""
         return self.width * self.height
 
     def perimeter(self):
-        """Düzbucaqlının perimetrini hesablayır."""
+        """Returns the perimeter of the rectangle."""
         return 2 * (self.width + self.height)
 
 
 def shape_info(shape):
-    """Duck typing vasitəsilə formanın məlumatlarını çap edir."""
+    """
+    Prints the area and perimeter of a shape using duck typing.
+    Does not check the type, only calls the required methods.
+    """
     print("Area: {}".format(shape.area()))
     print("Perimeter: {}".format(shape.perimeter()))
